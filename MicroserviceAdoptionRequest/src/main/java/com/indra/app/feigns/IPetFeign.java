@@ -9,7 +9,11 @@ import com.indra.app.entities.Adopter;
 import com.indra.app.entities.AdoptionStatus;
 import com.indra.app.entities.Pet;
 
-@FeignClient(name="microserviceadopter", url="http://localhost:9091")
+//Sin Eureka
+//@FeignClient(name="microservicepet", url="http://localhost:9091")
+
+//Con Eureka
+@FeignClient(name="microservicepet")
 public interface IPetFeign {
 	
 	@GetMapping("/pets/id")

@@ -7,13 +7,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.indra.app.entities.Adopter;
 
-@FeignClient(name="microservicepet", url="http://localhost:9092")
+//Sin Eureka
+//@FeignClient(name="microserviceadopter", url="http://localhost:9092")
+
+//Con Eureka
+@FeignClient(name="microserviceadopter")
 public interface IAdopterFeign {
 	
-	@GetMapping("/adopter/id")
+	@GetMapping("/adopters/id")
 	Adopter findById(@RequestParam("id") Long id);
 	
-	@GetMapping("/adopter/email")
+	@GetMapping("/adopters/email")
 	Adopter findByEmail(@RequestParam("email") String email);
 	
 	

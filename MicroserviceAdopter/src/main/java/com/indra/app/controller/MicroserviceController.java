@@ -20,7 +20,7 @@ import com.indra.app.exception.AdopterNotFoundException;
 import com.indra.app.service.IService;
 
 @RestController //JSON
-@RequestMapping("/adopter") //http://ip:port/pets
+@RequestMapping("/adopters") //http://ip:port/pets
 public class MicroserviceController {
 	
 	private IService service; //Inversión de dependencias, si cambio el service no tengo que modificar el contrller
